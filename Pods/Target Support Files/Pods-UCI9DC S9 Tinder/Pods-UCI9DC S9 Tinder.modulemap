@@ -1,0 +1,6 @@
+framework module Pods_UCI9DC_S9_Tinder {
+  umbrella header "Pods-UCI9DC S9 Tinder-umbrella.h"
+
+  export *
+  module * { export * }
+}

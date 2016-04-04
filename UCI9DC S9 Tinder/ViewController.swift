@@ -8,12 +8,28 @@
 
 import UIKit
 import Parse
+import ParseFacebookUtils
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        let permissions = ["public_profile"]
+        PFFacebookUtils.logInWithPermissionsInBackground(permissions).continueWithBlock { (task) -> AnyObject? in
+            if let error = task.error {
+                print("Error logging user in: \(error.localizedDescription)")
+            } else {
+                print("Current user: \(PFUser.currentUser())")
+                if let user = task.result as? PFUser {
+                    print(user)
+                } else {
+                    print("Unable to log user in with Facebook. Completed: \(task.completed). Result is not converible to PFUser: \(task.result)")
+                }
+            }
+            return nil
+        }
     }
 
     override func didReceiveMemoryWarning() {

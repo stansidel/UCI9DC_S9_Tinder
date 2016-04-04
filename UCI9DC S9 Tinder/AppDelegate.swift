@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 import Parse
+import ParseFacebookUtils
+import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -35,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If you are using Facebook, uncomment and add your FacebookAppID to your bundle's plist as
         // described here: https://developers.facebook.com/docs/getting-started/facebook-sdk-for-ios/
         // Uncomment the line inside ParseStartProject-Bridging-Header and the following line here:
-        // PFFacebookUtils.initializeFacebook()
+        PFFacebookUtils.initializeFacebook()
         // ****************************************************************************
         
         PFUser.enableAutomaticUser()
@@ -47,33 +49,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         PFACL.setDefaultACL(defaultACL, withAccessForCurrentUser: true)
         
-        if application.applicationState != UIApplicationState.Background {
-            // Track an app open here if we launch with a push, unless
-            // "content_available" was used to trigger a background push (introduced in iOS 7).
-            // In that case, we skip tracking here to avoid double counting the app-open.
-            
-            let preBackgroundPush = !application.respondsToSelector("backgroundRefreshStatus")
-            let oldPushHandlerOnly = !self.respondsToSelector("application:didReceiveRemoteNotification:fetchCompletionHandler:")
-            var noPushPayload = false;
-            if let options = launchOptions {
-                noPushPayload = options[UIApplicationLaunchOptionsRemoteNotificationKey] != nil;
-            }
-            if (preBackgroundPush || oldPushHandlerOnly || noPushPayload) {
-                PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
-            }
-        }
-        
-        
-//        if #available(iOS 8.0, *) {
-            let types: UIUserNotificationType = [.Alert, .Badge, .Sound]
-            let settings = UIUserNotificationSettings(forTypes: types, categories: nil)
-            application.registerUserNotificationSettings(settings)
-            application.registerForRemoteNotifications()
-//        } else {
-//            let types: UIRemoteNotificationType = [.Alert, .Badge, .Sound]
-//            application.registerForRemoteNotificationTypes(types)
+//        if application.applicationState != UIApplicationState.Background {
+//            // Track an app open here if we launch with a push, unless
+//            // "content_available" was used to trigger a background push (introduced in iOS 7).
+//            // In that case, we skip tracking here to avoid double counting the app-open.
+//            
+//            let preBackgroundPush = !application.respondsToSelector(Selector("backgroundRefreshStatus"))
+//            let oldPushHandlerOnly = !self.respondsToSelector(#selector(UIApplicationDelegate.application(_:didReceiveRemoteNotification:fetchCompletionHandler:)))
+//            var noPushPayload = false;
+//            if let options = launchOptions {
+//                noPushPayload = options[UIApplicationLaunchOptionsRemoteNotificationKey] != nil;
+//            }
+//            if (preBackgroundPush || oldPushHandlerOnly || noPushPayload) {
+//                PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+//            }
 //        }
-        
+//        
+//        
+//        let types: UIUserNotificationType = [.Alert, .Badge, .Sound]
+//        let settings = UIUserNotificationSettings(forTypes: types, categories: nil)
+//        application.registerUserNotificationSettings(settings)
+//        application.registerForRemoteNotifications()
+
         // Override point for customization after application launch.
         return true
     }
@@ -94,6 +91,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        FBSDKAppEvents.activateApp()
     }
 
     func applicationWillTerminate(application: UIApplication) {
@@ -211,12 +209,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: Facebook SDK Integration
     //--------------------------------------
     
-    ///////////////////////////////////////////////////////////
-    // Uncomment this method if you are using Facebook
-    ///////////////////////////////////////////////////////////
-    // func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
-    //     return FBAppCall.handleOpenURL(url, sourceApplication:sourceApplication, session:PFFacebookUtils.session())
-    // }
-
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        return FBAppCall.handleOpenURL(url, sourceApplication:sourceApplication, withSession:PFFacebookUtils.session())
+    }
 }
 

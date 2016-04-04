@@ -7,19 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		534439DECAAEBEC9BDFADC05 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8506DEB26D856BD0FD04F9 /* Pods.framework */; };
 		F650559C1CA6866600FE6D28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F650559B1CA6866600FE6D28 /* AppDelegate.swift */; };
 		F650559E1CA6866600FE6D28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F650559D1CA6866600FE6D28 /* ViewController.swift */; };
 		F65055A11CA6866600FE6D28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F650559F1CA6866600FE6D28 /* Main.storyboard */; };
 		F65055A41CA6866600FE6D28 /* UCI9DC_S9_Tinder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F65055A21CA6866600FE6D28 /* UCI9DC_S9_Tinder.xcdatamodeld */; };
 		F65055A61CA6866600FE6D28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F65055A51CA6866600FE6D28 /* Assets.xcassets */; };
 		F65055A91CA6866600FE6D28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F65055A71CA6866600FE6D28 /* LaunchScreen.storyboard */; };
-		F65055B21CA6B20E00FE6D28 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F65055B01CA6B20E00FE6D28 /* Bolts.framework */; };
-		F65055B31CA6B20E00FE6D28 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F65055B11CA6B20E00FE6D28 /* Parse.framework */; };
 		F65055B61CA6B46D00FE6D28 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F65055B51CA6B46D00FE6D28 /* libsqlite3.tbd */; };
 		F65055B81CA6B4DC00FE6D28 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F65055B71CA6B4DC00FE6D28 /* libstdc++.6.tbd */; };
+		F66F34741CB24FA400BA38F4 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66F34721CB24FA400BA38F4 /* FBSDKCoreKit.framework */; };
+		F66F34751CB24FA400BA38F4 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66F34731CB24FA400BA38F4 /* FBSDKLoginKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A8506DEB26D856BD0FD04F9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A424CBE0A3B1711723C678A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C19085B8E17AE824B2425495 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F65055981CA6866600FE6D28 /* UCI9DC S9 Tinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UCI9DC S9 Tinder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F650559B1CA6866600FE6D28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F650559D1CA6866600FE6D28 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,10 +32,10 @@
 		F65055A51CA6866600FE6D28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F65055A81CA6866600FE6D28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F65055AA1CA6866600FE6D28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F65055B01CA6B20E00FE6D28 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Carthage/Build/iOS/Bolts.framework; sourceTree = "<group>"; };
-		F65055B11CA6B20E00FE6D28 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Carthage/Build/iOS/Parse.framework; sourceTree = "<group>"; };
 		F65055B51CA6B46D00FE6D28 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		F65055B71CA6B4DC00FE6D28 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
+		F66F34721CB24FA400BA38F4 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		F66F34731CB24FA400BA38F4 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,21 +44,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				F65055B81CA6B4DC00FE6D28 /* libstdc++.6.tbd in Frameworks */,
+				F66F34741CB24FA400BA38F4 /* FBSDKCoreKit.framework in Frameworks */,
+				F66F34751CB24FA400BA38F4 /* FBSDKLoginKit.framework in Frameworks */,
 				F65055B61CA6B46D00FE6D28 /* libsqlite3.tbd in Frameworks */,
-				F65055B31CA6B20E00FE6D28 /* Parse.framework in Frameworks */,
-				F65055B21CA6B20E00FE6D28 /* Bolts.framework in Frameworks */,
+				534439DECAAEBEC9BDFADC05 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EADEFC06F39798A9FB448204 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C19085B8E17AE824B2425495 /* Pods.debug.xcconfig */,
+				7A424CBE0A3B1711723C678A /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F650558F1CA6866600FE6D28 = {
 			isa = PBXGroup;
 			children = (
 				F65055B91CA6B4E300FE6D28 /* Frameworks */,
 				F650559A1CA6866600FE6D28 /* UCI9DC S9 Tinder */,
 				F65055991CA6866600FE6D28 /* Products */,
+				EADEFC06F39798A9FB448204 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,8 +100,9 @@
 			children = (
 				F65055B71CA6B4DC00FE6D28 /* libstdc++.6.tbd */,
 				F65055B51CA6B46D00FE6D28 /* libsqlite3.tbd */,
-				F65055B01CA6B20E00FE6D28 /* Bolts.framework */,
-				F65055B11CA6B20E00FE6D28 /* Parse.framework */,
+				F66F34721CB24FA400BA38F4 /* FBSDKCoreKit.framework */,
+				F66F34731CB24FA400BA38F4 /* FBSDKLoginKit.framework */,
+				2A8506DEB26D856BD0FD04F9 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -98,10 +114,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F65055AD1CA6866600FE6D28 /* Build configuration list for PBXNativeTarget "UCI9DC S9 Tinder" */;
 			buildPhases = (
+				39376C4D42B08D078D71293F /* Check Pods Manifest.lock */,
 				F65055941CA6866600FE6D28 /* Sources */,
 				F65055951CA6866600FE6D28 /* Frameworks */,
 				F65055961CA6866600FE6D28 /* Resources */,
 				F65055B41CA6B28700FE6D28 /* Carthage Copy Frameworks */,
+				9DABF09896F548E3A05D6B65 /* Embed Pods Frameworks */,
+				63CD8C14227AAA620D78318E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -159,14 +178,57 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		39376C4D42B08D078D71293F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		63CD8C14227AAA620D78318E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DABF09896F548E3A05D6B65 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F65055B41CA6B28700FE6D28 /* Carthage Copy Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Parse.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Bolts.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputPaths = (
@@ -293,11 +355,13 @@
 		};
 		F65055AE1CA6866600FE6D28 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C19085B8E17AE824B2425495 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
+					"~/Documents/FacebookSDK",
 				);
 				INFOPLIST_FILE = "UCI9DC S9 Tinder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -308,11 +372,13 @@
 		};
 		F65055AF1CA6866600FE6D28 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A424CBE0A3B1711723C678A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
+					"~/Documents/FacebookSDK",
 				);
 				INFOPLIST_FILE = "UCI9DC S9 Tinder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -340,6 +406,7 @@
 				F65055AF1CA6866600FE6D28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
